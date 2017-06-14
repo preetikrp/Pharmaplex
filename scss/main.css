@@ -1,0 +1,28 @@
+body {
+  background-color: lavender; }
+
+h1, h2 {
+  text-align: center; }
+
+.main-container {
+  border: 2px dashed white; }
+
+.container--auth {
+  background-color: white;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 10px;
+  border: 2px solid #ccc; }
+
+.search-bar-spacing {
+  margin-bottom: 20px; }
+
+.title-bar {
+  font-weight: bold; }
+
+.form--demo {
+  background-color: white;
+  border: 2px solid #ccc;
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 10px; }
