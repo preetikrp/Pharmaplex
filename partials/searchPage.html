@@ -1,15 +1,12 @@
-<div class="input-group col-xs-6 col-xs-offset-3">
+<div class="input-group col-xs-6 col-xs-offset-4" ng-controller="SearchCtrl">
     <br>
     <br>
-    <span class="input-group-addon" id="basic-addon1">
+    <!--<span class="input-group-addon" id="basic-addon1">
       <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-    </span>
-    <input type="text" class="form-control" placeholder="Search" aria-describedby="basic-addon1" ng-model="searchText.search">
+    </span>-->
+    <form ng-submit="searchForDrug()">
+        <input ng-model="SearchText" placeholder="Search drug prices" autocomplete="off" autosuggest="off" autocorrect="off">
+        <input ng-click="searchForDrug()" type="submit" id="submit" value="Submit">
+    </form>
+
 </div>
-<table ng-controller="myCtrl">
-    <tr ng-repeat="(x,y) in myData">
-        <td ng-if="x === 'data'">
-            Data : {{ y }}
-        </td>
-    </tr>
-</table>

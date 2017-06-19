@@ -12,6 +12,20 @@
     <div ng-include="'partials/navbar.html'"></div>
     <div ng-include="'partials/searchPage.html'"></div>
     <div ng-view></div>
+
+   <table border=1>
+        <tr><td>getDrugData: {{ getDrugData }}</td></tr>
+
+        <tr ng-repeat="(x, y) in searchForDrug">
+            <!--<td ng-if="x === x">-->
+            <td>
+                Data : {{ x }}
+            </td>
+            <!--</td>-->
+        </tr>
+        <tr><td>footer</td></tr>
+    </table>
+
     <!-- third Party JS -->
     <script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="./lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -19,7 +33,7 @@
     <script type="text/javascript" src="./lib/node_modules/angular-route/angular-route.min.js"></script>
     <script type="text/javascript" src="./lib/node_modules/firebase/firebase.js"></script>
     <script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.js"></script>
-    <script type="text/javascript" src="./app/hmac-sha256.js"></script>
+    <!--<script type="text/javascript" src="./app/hmac-sha256.js"></script>
     <script type="text/javascript" src="./app/enc-base64-min.js"></script>-->
     <script type="text/javascript" src="./app/app.js"></script>
     <script type="text/javascript" src="./app/value/fbcreds.js"></script>
@@ -30,32 +44,9 @@
     <script type="text/javascript" src="./app/controllers/myCtrl.js"></script>
     <script type="text/javascript" src="./app/controllers/profileFormCtrl.js"></script>
     <script type="text/javascript" src="./app/controllers/navCtrl.js"></script>
+    <script type="text/javascript" src="./app/controllers/searchCtrl.js"></script>
     <!--<div ng-include="'partials/navbar.html'"></div>-->
-    <script>
 
-    app.controller('navCtrl', function($scope, AuthFactory, $window, SearchTermData) {
-
-        // Log Button Function
-
-        $scope.isLoggedIn = false;
-        $scope.searchText = SearchTermData;
-
-        firebase.auth().onAuthStateChanged(function(user) {
-            if (user) {
-                $scope.isLoggedIn = true;
-                console.log("currentUser logged in", user, $scope.isLoggedIn);
-                $scope.$apply();
-            } else {
-                $scope.isLoggedIn = false;
-                console.log("currentUser logged in", $scope.isLoggedIn);
-                $window.location.href = "#!/login";
-            }
-        });
-
-    });
-
-    ////////////////////////////////
-    </script>
 </body>
 
 </html>
