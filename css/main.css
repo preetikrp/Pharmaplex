@@ -1,5 +1,8 @@
 body {
-    background-color: white;
+    background-image: url(../images/Background4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
 }
 
 h1,
@@ -20,7 +23,7 @@ h2 {
 }
 
 .search-bar-spacing {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .title-bar {
@@ -40,5 +43,6 @@ h2 {
 }
 
 .Logo {
-    width: 50%;
+    width: 70%;
 }
+

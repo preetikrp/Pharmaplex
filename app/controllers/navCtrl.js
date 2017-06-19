@@ -1,7 +1,7 @@
 "use strict";
 console.log("navCtrl.js");
-   //var app = angular.module('myApp');
-   app.controller('navCtrl', function($scope, AuthFactory, $window, SearchTermData) {
+//var app = angular.module('myApp');
+app.controller('navCtrl', function($scope, AuthFactory, $window, SearchTermData) {
 
     // Log Button Function
 
