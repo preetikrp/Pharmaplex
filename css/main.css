@@ -46,3 +46,51 @@ h2 {
     width: 70%;
 }
 
+.dropdown-menu {
+    align-content: right;
+}
+
+.search {
+    width: 300px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+
+.submit {
+    width: 140px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    text-align: left;
+}
+
+.btn-default dropdown-toggle {
+    width: 140px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    text-align: left;
+}
+
+h4 {
+    color: green;
+}

@@ -17,7 +17,6 @@ function EncryptPayload(searchqry, api_key, sec_key) {
 }
 
 
-
 const app = angular.module("myApp", ["ngRoute"]);
 
 let isAuth = (AuthFactory) => new Promise((resolve, reject) => {
@@ -38,15 +37,19 @@ let isAuth = (AuthFactory) => new Promise((resolve, reject) => {
 
 app.config(($routeProvider) => {
     $routeProvider
-        //.when("/", {
-           // templateUrl: "partials/intro.html",
-            //controller: "myCtrl",
-            //resolve: { isAuth }
-       // })
+    //.when("/", {
+    // templateUrl: "partials/intro.html",
+    //controller: "myCtrl",
+    //resolve: { isAuth }
+    // })
 
-    .when("/login", {
+        .when("/login", {
             templateUrl: "partials/login.html",
             controller: "AuthCtrl"
+        })
+        .when("/intro", {
+            templateUrl: "partials/intro.html",
+            resolve: {isAuth}
         })
         .when("/logout", {
             templateUrl: "partials/login.html",
@@ -54,8 +57,8 @@ app.config(($routeProvider) => {
 
         })
         .when("/ContactUs", {
-            templateUrl: "partials/Contact.html",
-            controller: "profieleFormCtrl",
+            templateUrl: "partials/contact.html",
+            //controller: "ContactUsCtrl",
             resolve: { isAuth }
         })
 
