@@ -12,20 +12,21 @@
     <div ng-include="'partials/navbar.html'"></div>
     <div ng-include="'partials/searchPage.html'"></div>
     <div ng-view></div>
-
-   <table border=1>
-        <tr><td>getDrugData: {{ getDrugData }}</td></tr>
-
-        <tr ng-repeat="(x, y) in searchForDrug">
+    <table border=1>
+        <tr>
+            <td>getDrugData: {{ getDrugData }}</td>
+        </tr>
+        <tr ng-repeat="(x, y) in searchForDrug">-
             <!--<td ng-if="x === x">-->
             <td>
                 Data : {{ x }}
             </td>
             <!--</td>-->
         </tr>
-        <tr><td>footer</td></tr>
+        <tr>
+            <td>footer</td>
+        </tr>
     </table>
-
     <!-- third Party JS -->
     <script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="./lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -42,11 +43,10 @@
     <script type="text/javascript" src="./app/factory/searchFactory.js"></script>
     <script type="text/javascript" src="./app/controllers/authCtrl.js"></script>
     <script type="text/javascript" src="./app/controllers/myCtrl.js"></script>
-    <script type="text/javascript" src="./app/controllers/profileFormCtrl.js"></script>
     <script type="text/javascript" src="./app/controllers/navCtrl.js"></script>
     <script type="text/javascript" src="./app/controllers/searchCtrl.js"></script>
+    <!--<script type="text/javascript" src="./app/controllers/ContactUsCtrl.js"></script>-->
     <!--<div ng-include="'partials/navbar.html'"></div>-->
-
 </body>
 
 </html>

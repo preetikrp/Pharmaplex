@@ -11,11 +11,36 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a ng-show="!isLoggedIn" ng-href="#!/Home">Home</a></li>
-                <li><a ng-show="isLoggedIn" ng-href="#!/Home">Home</a></li>
-                <li><a ng-show="!isLoggedIn" ng-href="#!/login">Login</a></li>
-                <li><a ng-show="isLoggedIn" ng-href="#!/logout">Logout</a></li>
-                <li><a ng-show="" ng-href="#!/ContactUs">ContactUs</a></li>
+                <li>
+                    <a ng-show="!isLoggedIn" ng-href="#!/Home">
+                        <font size="3">Home</font>
+                    </a>
+                </li>
+                <li>
+                    <a ng-show="isLoggedIn" ng-href="#!/Home">
+                        <font size="3">Home</font>
+                    </a>
+                </li>
+                <li>
+                    <a ng-show="isLoggedIn" ng-href="#!/intro">
+                        <font size="3">Introduction</font>
+                    </a>
+                </li>
+                <li>
+                    <a ng-show="!isLoggedIn" ng-href="#!/login">
+                        <font size="3">Login</font>
+                    </a>
+                </li>
+                <li>
+                    <a ng-show="isLoggedIn" ng-href="#!/logout">
+                        <font size="3">Logout</font>
+                    </a>
+                </li>
+                <li>
+                    <a ng-show="isLoggedIn" ng-href="#!/ContactUs">
+                        <font size="3">ContactUs</font>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
