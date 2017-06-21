@@ -35,7 +35,7 @@
         </tr>
         <tr ng-if="search != ''">
             <td>GoodRX page URL: </td>
-            <td><a href="{{ y.url }}">Click here</a></td>
+            <td><a href="{{ y.url }}" target="_blank">Click here</a></td>
         </tr>
         <tr ng-if="search != ''">
             <td>Brand: </td>
@@ -58,4 +58,18 @@
             <td>{{ y.manufacturer }}</td>
         </tr>
     </table>
+    <div ng-if="candidates">
+    <h1>List of Drugs</h1>
+    <table ng-repeat="candidate in candidates">
+       <td>{{candidate}}</td>
+
+    </table>
+    </div>
+      <div ng-if="druginfo">
+    <h1>Drug Information</h1>
+    <table ng-repeat="info in druginfo">
+    <td><a href="{{info}}" target="_blank" >{{info}}</a></td>
+
+    </table>
+    </div>
 </center>

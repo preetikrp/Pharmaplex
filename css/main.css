@@ -2,7 +2,7 @@ body {
     background-image: url(../images/Background4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 150vh;
 }
 
 h1,
@@ -40,7 +40,7 @@ h2 {
 }
 
 .navbar-default {
-    background: yellow;
+    background: #FFEB3B;
 }
 
 .Logo {
@@ -90,11 +90,17 @@ h2 {
     text-align: left;
 }
 
-h4 {
+h4 {margin-top: 75px;
+    margin-left:85px;
     color: black;
 }
 .whole {
-color:grey; font-size: 26px; background-color:yellow;
+color:grey; 
+font-size: 26px; 
+background-color: #efefef;
+margin: 100px 100px 0px 100px;
+
+
 }
 #footer {
   position:fixed;
@@ -103,14 +109,16 @@ color:grey; font-size: 26px; background-color:yellow;
   right:0;
   height:60px;
    width:100%;
-      /* Height of the footer */
+   background: #424242;
+
+     /* Height of the footer */
 
 }
 
 table {
     width:60%;
     color: black;
-    background: yellow;
+    background: #FFEB3B;
     font-weight: bold;
 }
 table, th, td {
@@ -131,4 +139,9 @@ table#t01 th {
     background-color: black;
     color: white;
 }
-
+.footer{
+    margin-left: 0px;
+    margin-right: 0px;
+    color: black;
+    background-color: #424242;
+}
