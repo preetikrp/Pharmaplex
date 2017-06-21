@@ -23,7 +23,17 @@
                 </li>
                 <li>
                     <a ng-show="isLoggedIn" ng-href="#!/intro">
-                        <font size="3">Introduction</font>
+                        <font size="3">About Us</font>
+                    </a>
+                </li>
+                <li>
+                    <a ng-show="isLoggedIn" ng-href="#!/search">
+                        <font size="3">Search</font>
+                    </a>
+                </li>
+                <li>
+                    <a ng-show="!isLoggedIn" ng-href="#!/search">
+                        <font size="3">Search</font>
                     </a>
                 </li>
                 <li>
@@ -32,13 +42,13 @@
                     </a>
                 </li>
                 <li>
-                    <a ng-show="isLoggedIn" ng-href="#!/logout">
-                        <font size="3">Logout</font>
+                    <a ng-show="isLoggedIn" ng-href="#!/ContactUs">
+                        <font size="3">ContactUs</font>
                     </a>
                 </li>
                 <li>
-                    <a ng-show="isLoggedIn" ng-href="#!/ContactUs">
-                        <font size="3">ContactUs</font>
+                    <a ng-show="isLoggedIn" ng-href="#!/logout">
+                        <font size="3">Logout</font>
                     </a>
                 </li>
             </ul>
