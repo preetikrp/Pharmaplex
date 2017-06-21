@@ -1,4 +1,4 @@
 "use strict";
-app.controller('ComparePriceCtr', function($scope, DataFactory, $location){
-	
+app.controller('ComparePriceCtr', function($scope, DataFactory, $location) {
+
 })

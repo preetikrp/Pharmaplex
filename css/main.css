@@ -30,6 +30,7 @@ h2 {
     font-weight: bold;
 }
 
+
 .form--demo {
     background-color: white;
     border: 2px solid #ccc;
@@ -57,7 +58,6 @@ h2 {
     border-radius: 6px;
     font-size: 16px;
     background-color: white;
-    background-image: url('searchicon.png');
     background-position: 10px 10px;
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
@@ -70,7 +70,7 @@ h2 {
     border-radius: 6px;
     font-size: 16px;
     background-color: white;
-    background-image: url('searchicon.png');
+
     background-position: 10px 10px;
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
@@ -84,7 +84,6 @@ h2 {
     border-radius: 6px;
     font-size: 16px;
     background-color: white;
-    background-image: url('searchicon.png');
     background-position: 10px 10px;
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
@@ -92,5 +91,44 @@ h2 {
 }
 
 h4 {
-    color: green;
+    color: black;
 }
+.whole {
+color:grey; font-size: 26px; background-color:yellow;
+}
+#footer {
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  height:60px;
+   width:100%;
+      /* Height of the footer */
+
+}
+
+table {
+    width:60%;
+    color: black;
+    background: yellow;
+    font-weight: bold;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+   background-color:#fff;
+}
+table#t01 th {
+    background-color: black;
+    color: white;
+}
+

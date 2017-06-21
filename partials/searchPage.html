@@ -1,22 +1,61 @@
-<div class="input-group col-xs-6 col-xs-offset-4" ng-controller="SearchCtrl">
+<center>
+    <from>
+        <div class="input-group search-bar">
+            <input type="text" ng-model="search" ng-model-options="{ debounce: 900 }" onclick="select()" class="form-control" placeholder="Enter the drug name" autofocus />
+            <select name="singleSelect" ng-model="singleSelect" class="form-control">
+                <option value="">---Please select---</option>
+                <option value="fp">Fair Price</option>
+                <option value="cp">Compare Price</option>
+                <option value="lp">Low Price</option>
+                <option value="di">Drug Info</option>
+                <option value="ds">Drug Search</option>
+            </select>
+        </div>
+    </from>
     <br>
     <br>
-    <form ng-submit="searchForDrug()">
-        <input ng-model="SearchText" placeholder="Search drug prices" autocomplete="off" autosuggest="off" autocorrect="off" class="search">
-        <input ng-click="searchForDrug()" type="submit" id="submit" value="Submit" class="submit">
-        <button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            Dropdown
-            <span class="caret"></span>
-            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dLabel">
-                <li><a href="#">Fair Price</a></li>
-                <li><a href="#">Low Price</a></li>
-                <li><a href="#">Price Comparison</a></li>
-                <li><a href="#">Drug Info</a></li>
-                <li><a href="#">Drug Data</a></li>
-                <li><a href="#">Cupons</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-            </ul>
-        </button>
-    </form>
-</div>
+    <br>
+    <br>
+    <table ng-repeat="(x,y) in myData" ng-if="x === 'data'">
+        <tr ng-if="search != ''">
+            <td>Drug Name: </td>
+            <td>{{ y.display }}</td>
+        </tr>
+        <tr ng-if="search != ''">
+            <td>Form: </td>
+            <td>{{ y.form }}</td>
+        </tr>
+        <tr ng-if="search != ''">
+            <td>Discount Coupons: </td>
+            <td>{{ y.price_detail.pharmacy }}</td>
+        </tr>
+        <tr ng-if="search != ''">
+            <td>Form: </td>
+            <td>{{ y.form }}</td>
+        </tr>
+        <tr ng-if="search != ''">
+            <td>GoodRX page URL: </td>
+            <td><a href="{{ y.url }}">Click here</a></td>
+        </tr>
+        <tr ng-if="search != ''">
+            <td>Brand: </td>
+            <td>{{ y.brand }}</td>
+        </tr>
+        <tr ng-if="search != ''">
+            <td>Dosage: </td>
+            <td>{{ y.dosage }}</td>
+        </tr>
+        <tr ng-if="search != ''">
+            <td>Generic: </td>
+            <td>{{ y.generic }}</td>
+        </tr>
+        <tr ng-if="search != ''">
+            <td>quantity: </td>
+            <td>{{ y.quantity }}</td>
+        </tr>
+        <tr ng-if="search != ''">
+            <td>Manufacturer: </td>
+            <td>{{ y.manufacturer }}</td>
+        </tr>
+    </table>
+</center>
