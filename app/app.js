@@ -22,6 +22,7 @@ function EncryptPayload(searchqry, singleSelect, api_key, sec_key) {
         apiname = "http://localhost:6060/api/goodrx/drug-info?name=";
     } else if (singleSelect === "ds") {
         apiname = "http://localhost:6060/api/goodrx/drug-search?name=";
+        
     } else {
         apiname = "http://localhost:6060/api/goodrx/fair-price?name=";
     }

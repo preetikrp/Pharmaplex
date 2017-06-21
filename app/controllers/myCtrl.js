@@ -20,7 +20,10 @@ app.controller('myCtrl', function($scope, $http) {
         $http.get(EncryptPayload($scope.search, $scope.singleSelect, "cdd6bf883c", "2qG4/R1YcWWWmE7F5j1hjA=="))
             .then(function(response) {
                 $scope.myData = response.data;
-                console.log("response: " + response.status);
+                
+                $scope.candidates = $scope.myData.data.candidates;
+                $scope.druginfo = $scope.myData.data.drugs.tablet;
+
             });
     };
 })
