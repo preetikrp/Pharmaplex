@@ -22,13 +22,11 @@ function EncryptPayload(searchqry, singleSelect, api_key, sec_key) {
         apiname = "http://localhost:6060/api/goodrx/drug-info?name=";
     } else if (singleSelect === "ds") {
         apiname = "http://localhost:6060/api/goodrx/drug-search?name=";
-        
+
     } else {
         apiname = "http://localhost:6060/api/goodrx/fair-price?name=";
     }
 
-    //console.log("http://localhost:6060/api/goodrx/compare-price?name=" + searchqry + "&api_key=" + api_key + "&sig=" + finalSignature);
-    //return ("http://localhost:6060/api/goodrx/compare-price?name=" + searchqry + "&api_key=" + api_key + "&sig=" + finalSignature);
 
     console.log(apiname + searchqry + "&api_key=" + api_key + "&sig=" + finalSignature);
     return (apiname + searchqry + "&api_key=" + api_key + "&sig=" + finalSignature);
@@ -83,7 +81,7 @@ app.config(($routeProvider) => {
         })
         .when("/ContactUs", {
             templateUrl: "partials/Contact.html",
-            controller: "profieleFormCtrl",
+
             resolve: { isAuth }
         })
 

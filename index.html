@@ -10,13 +10,13 @@
 
 <body ng-app="myApp" ng-controller="myCtrl">
     <div ng-include="'partials/navbar.html'"></div>
-    <!--<div ng-include="'partials/searchPage.html'"></div>-->
     <div ng-view></div>
     <footer class="fixed-bottom footer" id="footer">
-    <div>
-        <p>Copyright © Preeti</p><a target="_blank" href="https://www.goodrx.com/developer"><img src="https://d4fuqqd5l3dbz.cloudfront.net/static/logos/powered-by-goodrx-yellow-xs.png"></a>
+        <div>
+            <p>Copyright © Preeti</p>
+            <a target="_blank" href="https://www.goodrx.com/developer"><img src="https://d4fuqqd5l3dbz.cloudfront.net/static/logos/powered-by-goodrx-yellow-xs.png"></a>
         </div>
-        </footer>
+    </footer>
     <!-- third Party JS -->
     <script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="./lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -24,8 +24,6 @@
     <script type="text/javascript" src="./lib/node_modules/angular-route/angular-route.min.js"></script>
     <script type="text/javascript" src="./lib/node_modules/firebase/firebase.js"></script>
     <script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.js"></script>
-    <!--<script type="text/javascript" src="./app/hmac-sha256.js"></script>
-    <script type="text/javascript" src="./app/enc-base64-min.js"></script>-->
     <script type="text/javascript" src="./app/app.js"></script>
     <script type="text/javascript" src="./app/value/fbcreds.js"></script>
     <script type="text/javascript" src="./app/factory/authFactory.js"></script>
@@ -33,48 +31,7 @@
     <script type="text/javascript" src="./app/factory/searchFactory.js"></script>
     <script type="text/javascript" src="./app/controllers/authCtrl.js"></script>
     <script type="text/javascript" src="./app/controllers/myCtrl.js"></script>
-    <script type="text/javascript" src="./app/controllers/profileFormCtrl.js"></script>
     <script type="text/javascript" src="./app/controllers/navCtrl.js"></script>
-    <!--<div ng-include="'partials/navbar.html'"></div>-->
-    <script>
-    /*
-      //var app = angular.module('myApp',[]);
-        app.controller('myCtrl', function($scope, $http) {
-            $scope.searchGoodRx = function(){
-            console.log("here");
-            $http.get(EncryptPayload($scope.searchText, "cdd6bf883c", "2qG4/R1YcWWWmE7F5j1hjA=="))
-                .then(function(response) {
-                    $scope.myData = response.data;
-                    console.log("response: " + response.status);
-                });
-        }});
-    */
-
-
-
-
-    // var app = angular.module('myApp');
-    app.controller('navCtrl', function($scope, AuthFactory, $window, SearchTermData) {
-
-        // Log Button Function
-
-        $scope.isLoggedIn = false;
-        $scope.searchText = SearchTermData;
-
-        firebase.auth().onAuthStateChanged(function(user) {
-            if (user) {
-                $scope.isLoggedIn = true;
-                console.log("currentUser logged in", user, $scope.isLoggedIn);
-                $scope.$apply();
-            } else {
-                $scope.isLoggedIn = false;
-                console.log("currentUser logged in", $scope.isLoggedIn);
-                $window.location.href = "#!/";
-            }
-        });
-
-    });
-    </script>
 </body>
 
 </html>

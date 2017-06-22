@@ -16,60 +16,64 @@
     <br>
     <br>
     <br>
-    <table ng-repeat="(x,y) in myData" ng-if="x === 'data'">
-        <tr ng-if="search != ''">
-            <td>Drug Name: </td>
-            <td>{{ y.display }}</td>
-        </tr>
-        <tr ng-if="search != ''">
-            <td>Form: </td>
-            <td>{{ y.form }}</td>
-        </tr>
-        <tr ng-if="search != ''">
-            <td>Discount Coupons: </td>
-            <td>{{ y.price_detail.pharmacy }}</td>
-        </tr>
-        <tr ng-if="search != ''">
-            <td>Form: </td>
-            <td>{{ y.form }}</td>
-        </tr>
-        <tr ng-if="search != ''">
-            <td>GoodRX page URL: </td>
-            <td><a href="{{ y.url }}" target="_blank">Click here</a></td>
-        </tr>
-        <tr ng-if="search != ''">
-            <td>Brand: </td>
-            <td>{{ y.brand }}</td>
-        </tr>
-        <tr ng-if="search != ''">
-            <td>Dosage: </td>
-            <td>{{ y.dosage }}</td>
-        </tr>
-        <tr ng-if="search != ''">
-            <td>Generic: </td>
-            <td>{{ y.generic }}</td>
-        </tr>
-        <tr ng-if="search != ''">
-            <td>quantity: </td>
-            <td>{{ y.quantity }}</td>
-        </tr>
-        <tr ng-if="search != ''">
-            <td>Manufacturer: </td>
-            <td>{{ y.manufacturer }}</td>
-        </tr>
-    </table>
-    <div ng-if="candidates">
-    <h1>List of Drugs</h1>
-    <table ng-repeat="candidate in candidates">
-       <td>{{candidate}}</td>
-
-    </table>
+    <div ng-if="fairprice">
+        <table ng-repeat="(index,value) in myData" ng-if="index === 'data'" or ng-if="singleSelect != 'di'">
+            <tr ng-if="search != ''">
+                <td>Drug Name: </td>
+                <td>{{ value.display }}</td>
+            </tr>
+            <tr ng-if="search != ''">
+                <td>Price: </td>
+                <td>${{ value.price }}</td>
+            </tr>
+            <tr ng-if="search != ''">
+                <td>Form: </td>
+                <td>{{ value.form }}</td>
+            </tr>
+            <tr ng-if="search != ''">
+                <td>Discount Coupons: </td>
+                <td>{{ value.price_detail.pharmacy }}</td>
+            </tr>
+            <tr ng-if="search != ''">
+                <td>Form: </td>
+                <td>{{ value.form }}</td>
+            </tr>
+            <tr ng-if="search != ''">
+                <td>GoodRX page URL: </td>
+                <td><a href="{{ value.url }}" target="_blank">Click here</a></td>
+            </tr>
+            <tr ng-if="search != ''">
+                <td>Brand: </td>
+                <td>{{ value.brand }}</td>
+            </tr>
+            <tr ng-if="search != ''">
+                <td>Dosage: </td>
+                <td>{{ value.dosage }}</td>
+            </tr>
+            <tr ng-if="search != ''">
+                <td>Generic: </td>
+                <td>{{ value.generic }}</td>
+            </tr>
+            <tr ng-if="search != ''">
+                <td>quantity: </td>
+                <td>{{ value.quantity }}</td>
+            </tr>
+            <tr ng-if="search != ''">
+                <td>Manufacturer: </td>
+                <td>{{ value.manufacturer }}</td>
+            </tr>
+        </table>
     </div>
-      <div ng-if="druginfo">
-    <h1>Drug Information</h1>
-    <table ng-repeat="info in druginfo">
-    <td><a href="{{info}}" target="_blank" >{{info}}</a></td>
-
-    </table>
+    <div ng-if="candidates">
+        <h1>List of Drugs</h1>
+        <table ng-repeat="candidate in candidates">
+            <td>{{candidate}}</td>
+        </table>
+    </div>
+    <div ng-if="druginfo">
+        <h1>Drug Information</h1>
+        <table ng-repeat="info in druginfo">
+            <td><a href="{{info}}" target="_blank">{{info}}</a></td>
+        </table>
     </div>
 </center>
