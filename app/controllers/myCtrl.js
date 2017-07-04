@@ -24,13 +24,14 @@ app.controller('myCtrl', function($scope, $http) {
                 $scope.candidates = $scope.myData.data.candidates;
 
                 if ($scope.singleSelect === 'di') {
+                    console.log("di");
                     $scope.druginfo = $scope.myData.data.drugs.tablet;
+                }else{
+                    $scope.druginfo = '';
                 }
 
-
-                // if($scope.singleSelect ==='fp'){
                 $scope.fairprice = $scope.myData.data.mobile_url;
-                //}
+
 
             });
     };

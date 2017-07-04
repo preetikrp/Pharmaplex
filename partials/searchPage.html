@@ -64,16 +64,18 @@
             </tr>
         </table>
     </div>
+    <div ng-if="druginfo">
+        <h1>Drug Information</h1>
+        <table ng-repeat="(first,info) in druginfo">
+            <td><a href="{{info}}" target="_blank">{{info}}</a></td>
+        </table>
+    </div>
+
+
     <div ng-if="candidates">
         <h1>List of Drugs</h1>
         <table ng-repeat="candidate in candidates">
             <td>{{candidate}}</td>
-        </table>
-    </div>
-    <div ng-if="druginfo">
-        <h1>Drug Information</h1>
-        <table ng-repeat="info in druginfo">
-            <td><a href="{{info}}" target="_blank">{{info}}</a></td>
         </table>
     </div>
 </center>
