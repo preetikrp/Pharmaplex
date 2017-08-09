@@ -1,15 +1,10 @@
 
-node_module
-
-node_module
 
  .vs
-<<<<<<< HEAD
+
  lib
  node_modules
  balanced-match
- README.md
-=======
- 
- lib/node_modules/balanced-match/README.md
->>>>>>> ab39f33f7467ebfd0609fcbc359c85a4a9fd5ff0
+
+
+
