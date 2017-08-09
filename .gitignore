@@ -4,3 +4,7 @@ node_module
 node_module
 
  .vs
+ lib
+ node_modules
+ balanced-match
+ README.md
